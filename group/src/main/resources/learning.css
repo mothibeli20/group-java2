@@ -1,0 +1,212 @@
+/* GLOBAL STYLES: Full background image, font, default text color */
+.root {
+    /* Optional fallback background for .root if no class assigned */
+    -fx-background-image: url('file:src/main/resources/background.jpg');
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+
+    /* Font settings */
+    -fx-font-family: 'Arial Rounded MT Bold', 'Helvetica Neue', 'Segoe UI', sans-serif;
+    -fx-text-fill: #f1f1f1; /* Light text for contrast */
+}
+
+/* New class for background containers */
+.root-background {
+    -fx-background-image: url('file:src/main/resources/background.jpg');
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+}
+
+/* HEADER LABELS with glowing animation */
+.header-label, .section-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffd700; /* Gold color */
+    -fx-effect: dropshadow(gaussian, #ffd700, 6, 0, 0, 0);
+    -fx-font-family: 'Arial Rounded MT Bold';
+}
+
+/* Hover glow effect for header labels */
+.header-label:hover, .section-title:hover {
+    -fx-effect: dropshadow(gaussian, #ff69b4, 12, 0, 0, 0); /* Pink glow */
+    -fx-scale: 1.05;
+}
+
+/* BUTTONS: Neon glow, animated hover, website-style */
+.button {
+    -fx-background-color: linear-gradient(to bottom, #1b263b, #0d1b2a);
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8px;
+    -fx-padding: 10px 20px;
+    -fx-border-radius: 8px;
+    -fx-effect: dropshadow(gaussian, rgba(255,255,255,0.2), 4, 0, 0, 2);
+    -fx-cursor: hand;
+    -fx-alignment: center;
+    /* For consistent icon + text inside buttons, optional layout */
+    -fx-spacing: 8px;
+    -fx-content-display: left; /* if using graphic and text */
+}
+
+/* Hover effect for buttons */
+.button:hover {
+    -fx-background-color: linear-gradient(to bottom, #00ffcc, #00b7ff);
+    -fx-scale: 1.05;
+    -fx-effect: dropshadow(gaussian, #00ffff, 8, 0, 0, 0);
+}
+
+/* ICON BUTTONS: Use background images for icons */
+.icon-button {
+    -fx-background-color: transparent;
+    -fx-background-image: url('file:src/main/resources/icon1.jpg');
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-size: 24px 24px;
+    -fx-cursor: hand;
+    -fx-padding: 8px;
+    -fx-effect: dropshadow(gaussian, #ffffff, 4, 0, 0, 0);
+    -fx-transition: all 0.3s ease;
+    /* To align icon center if needed */
+    -fx-alignment: center;
+}
+
+/* Hover state for icon buttons */
+.icon-button:hover {
+    -fx-effect: dropshadow(gaussian, #00ffff, 8, 0, 0, 0);
+    -fx-background-color: rgba(255,255,255,0.2);
+}
+
+/* For buttons with icons and text, style the label inside buttons if used */
+.button .label {
+    -fx-fill: #ffffff;
+}
+
+/* Additional styling for buttons with graphic + text (optional) */
+.button .graphic {
+    -fx-margin-right: 8px;
+}
+
+/* TEXT FIELDS & TEXT AREAS: Sleek with neon glow on focus */
+.text-field, .text-area {
+    -fx-background-color: #1b263b;
+    -fx-text-fill: #f1f1f1;
+    -fx-prompt-text-fill: #777;
+    -fx-background-radius: 6px;
+    -fx-border-color: #333;
+    -fx-border-radius: 6px;
+    -fx-padding: 8px;
+    -fx-font-size: 14px;
+    -fx-effect: dropshadow(gaussian, rgba(0,255,204,0.3), 4, 0, 0, 0);
+    -fx-transition: all 0.2s ease;
+}
+
+/* Focused state for text fields & areas */
+.text-field:focused, .text-area:focused {
+    -fx-border-color: #00ffff;
+    -fx-border-width: 2px;
+    -fx-effect: dropshadow(gaussian, #00ffff, 8, 0, 0, 0);
+}
+
+/* LIST and TABLE views: Dark theme with neon accents */
+.list-view, .table-view {
+    -fx-background-color: #14213d;
+    -fx-control-inner-background: #14213d;
+    -fx-text-fill: #f1f1f1;
+    -fx-cell-size: 40px;
+    -fx-table-header-border-color: transparent;
+}
+
+/* Alternate row colors for table */
+.table-row-cell:odd {
+    -fx-background-color: #0d1b2a;
+}
+.table-row-cell:even {
+    -fx-background-color: #14213d;
+}
+.table-row-cell:selected {
+    -fx-background-color: #00ffff;
+    -fx-text-fill: #ffffff;
+    -fx-effect: dropshadow(gaussian, #00ffff, 12, 0, 0, 0);
+}
+
+/* Table headers with neon glow */
+.table-column-header, .column-header-background {
+    -fx-background-color: linear-gradient(to right, #ff00cc, #00ffff);
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-effect: dropshadow(gaussian, #00ffff, 4, 0, 0, 0);
+}
+
+/* Menu bar & menus: Modern neon style */
+.menu-bar {
+    -fx-background-color: #0d1b2a;
+    -fx-font-size: 14px;
+    -fx-text-fill: #f1f1f1;
+    -fx-effect: dropshadow(gaussian, #00ffff, 4, 0, 0, 0);
+    -fx-padding: 4px;
+}
+.menu {
+    -fx-background-color: linear-gradient(to right, #1b263b, #0d1b2a);
+    -fx-text-fill: #f1f1f1;
+}
+.menu-item {
+    -fx-background-color: transparent;
+    -fx-text-fill: #f1f1f1;
+}
+.menu-item:hover {
+    -fx-background-color: #333;
+    -fx-effect: dropshadow(gaussian, #00ffff, 4, 0, 0, 0);
+}
+
+/* Dialogs & Popups with glow & neon border */
+.dialog-pane {
+    -fx-background-color: #0d1b2a;
+    -fx-border-color: #66ff33;
+    -fx-border-width: 2px;
+    -fx-border-radius: 8px;
+    -fx-effect: dropshadow(gaussian, #66ff33, 8, 0, 0, 0);
+}
+.dialog-pane .header-panel {
+    -fx-background-color: #1b263b;
+    -fx-text-fill: #f1f1f1;
+    -fx-effect: dropshadow(gaussian, #ffff00, 4, 0, 0, 0);
+}
+.dialog-pane .content-label {
+    -fx-text-fill: #f1f1f1;
+}
+.dialog-pane .button {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-background-radius: 6px;
+    -fx-effect: dropshadow(gaussian, #00ffcc, 4, 0, 0, 0);
+}
+.dialog-pane .button:hover {
+    -fx-background-color: #66bb6a;
+    -fx-effect: dropshadow(gaussian, #00ffcc, 8, 0, 0, 0);
+}
+
+/* Header with shimmering animated background (placeholder) */
+.section-header {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffd700;
+    -fx-effect: dropshadow(gaussian, #000000, 2, 0, 0, 1);
+
+    -fx-background-size: 600% 600%;
+}
+
+/* Icon buttons (with images) for website feel */
+.icon-button {
+    -fx-background-color: transparent;
+    -fx-background-image: url('file:src/main/resources/icon2.jpg');
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-size: 24px 24px;
+}
+.icon-button:hover {
+    -fx-effect: dropshadow(gaussian, #00ffff, 8, 0, 0, 0);
+}

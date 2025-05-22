@@ -1,0 +1,7 @@
+/* Main application styles */
+.root {
+    -fx-background-color: #f8f9fa;
+    -fx-font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Tab styling */

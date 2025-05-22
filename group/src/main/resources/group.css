@@ -1,0 +1,41 @@
+/* Minimal style to avoid cyclic references */
+
+.stat-card {
+    -fx-background-color: #f0f0f0;
+    -fx-border-color: #ccc;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 3, 3);
+}
+
+.student-card {
+    -fx-background-color: #e0f7fa;
+}
+
+.course-card {
+    -fx-background-color: #ffe0b2;
+}
+
+.enrollment-card {
+    -fx-background-color: #dcedc8;
+}
+
+.primary-button {
+    -fx-background-color: #3a86ff;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+}
+
+.action-button {
+    -fx-background-color: #009688;
+    -fx-text-fill: white;
+    -fx-background-radius: 5px;
+}
+
+.report-button {
+    -fx-background-color: #ff5722;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
